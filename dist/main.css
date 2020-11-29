@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-display {
+  position: relative;
+  width: 270px;
+  height: 270px;
+  overflow: hidden;
+}
+.carousel-display i {
+  position: absolute;
+  top: 120px;
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.carousel-display i.fa-caret-left {
+  left: 20px;
+}
+.carousel-display i.fa-caret-right {
+  right: 20px;
+}
+.carousel-display i:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+.carousel-images {
+  display: flex;
+  position: relative;
+  width: 1310px;
+  height: 270px;
+  padding: 10px 5px;
+  background-color: #aaa;
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+}
+.carousel-images img {
+  display: block;
+  max-height: 250px;
+  max-width: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=main.css.map */
