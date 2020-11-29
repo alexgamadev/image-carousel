@@ -45,6 +45,31 @@ html, body {
     }
 }
 
+.carousel-links {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); 
+
+    .carousel-circle {
+      width: 10px;
+      height: 10px;
+      background-color: rgba($color: white, $alpha: 0.7);
+      border-radius: 50%;
+
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($color: white, $alpha: 0.9);
+      }
+
+      &.selected {
+        background-color: rgba($color: #888, $alpha: 0.9);
+      }
+    }
+}
+
 .carousel-images {
     display: flex;
     position: relative;

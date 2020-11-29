@@ -39,6 +39,28 @@ html, body {
   transform-origin: center;
 }
 
+.carousel-links {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.carousel-links .carousel-circle {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+.carousel-links .carousel-circle:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.carousel-links .carousel-circle.selected {
+  background-color: rgba(136, 136, 136, 0.9);
+}
+
 .carousel-images {
   display: flex;
   position: relative;
