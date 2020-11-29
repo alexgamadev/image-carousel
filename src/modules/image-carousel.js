@@ -9,6 +9,7 @@ export default class Carousel {
 
     [this._display] = element.querySelectorAll('.carousel-display');
     [this._imagesContainer] = this._display.querySelectorAll('.carousel-images');
+    this.initButtons();
   }
 
   nextImage() {
@@ -38,5 +39,16 @@ export default class Carousel {
 
   get display() {
     return this._display;
+  }
+
+  initButtons() {
+    this._buttons = this._display.querySelectorAll('i');
+    this._buttons.forEach((button) => {
+      if (button.classList.contains('fa-caret-left')) {
+        button.addEventListener('click', () => { this.previousImage(); });
+      } else if (button.classList.contains('fa-caret-right')) {
+        button.addEventListener('click', () => { this.nextImage(); });
+      }
+    });
   }
 }
